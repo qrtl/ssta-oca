@@ -19,9 +19,9 @@ Account commissions
 .. |badge4| image:: https://img.shields.io/badge/weblate-Translate%20me-F47D42.png
     :target: https://translation.odoo-community.org/projects/commission-15-0/commission-15-0-account_commission
     :alt: Translate me on Weblate
-.. |badge5| image:: https://img.shields.io/badge/runboat-Try%20me-875A7B.png
-    :target: https://runboat.odoo-community.org/webui/builds.html?repo=OCA/commission&target_branch=15.0
-    :alt: Try me on Runboat
+.. |badge5| image:: https://img.shields.io/badge/runbot-Try%20me-875A7B.png
+    :target: https://runbot.odoo-community.org/runbot/165/15.0
+    :alt: Try me on Runbot
 
 |badge1| |badge2| |badge3| |badge4| |badge5| 
 
@@ -69,7 +69,7 @@ For adding commissions on invoices:
 
 For invoicing the settlements (only for external agents):
 
-#. Go to *Invoicing > Vendors > Create commission invoices*.
+#. Go to *Invoicing > Commissions > Create commission invoices*.
 #. On the window that appears, you can select following data:
 
    * Product. It should be a service product for being coherent.

@@ -18,7 +18,7 @@ For adding commissions on invoices:
 
 For invoicing the settlements (only for external agents):
 
-#. Go to *Invoicing > Vendors > Create commission invoices*.
+#. Go to *Invoicing > Commissions > Create commission invoices*.
 #. On the window that appears, you can select following data:
 
    * Product. It should be a service product for being coherent.
