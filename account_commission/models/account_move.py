@@ -49,31 +49,28 @@ class AccountMove(models.Model):
         return super().action_post()
 
     def button_draft(self):
-        """Check settled lines and put settlements associated to the invoices in
-        invoice when state is changed from cancel to draft.
+        """Restrict reset to draft in invoice if there are settlement lines for invoice lines and 
+        put settlement state in invoiced when bill related with settlment is 
+        changed from cancel to draft again.
         """
+        if any(self.mapped("invoice_line_ids.any_settled")):
+            raise exceptions.ValidationError(
+                _("You can't reset to draft an invoice with settled lines"),
+            )
         self.mapped("line_ids.settlement_id").write({"state": "invoiced"})
         return super().button_draft()
 
     def button_cancel(self):
-        """Check settled lines and put settlements associated to the invoices in
-        exception.
+        """Put settlement state in except_invoice when bill related with settlment 
+        is changed to cancel state.
         """
-        if any(self.mapped("invoice_line_ids.any_settled")):
-            raise exceptions.ValidationError(
-                _("You can't cancel an invoice with settled lines"),
-            )
         self.mapped("line_ids.settlement_id").write({"state": "except_invoice"})
         return super().button_cancel()
     
     def unlink(self):
-        """Check settled lines and put settlements associated to the invoices in
-        settled state.
+        """Put settlement state in settled when bill related with settlment 
+        is deleted.
         """
-        if any(self.mapped("invoice_line_ids.any_settled")):
-            raise exceptions.ValidationError(
-                _("You can't delete an invoice with settled lines"),
-            )
         self.mapped("line_ids.settlement_id").write({"state": "settled"})
         return super().unlink()
 
