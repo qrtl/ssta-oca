@@ -50,14 +50,32 @@ class AccountMove(models.Model):
 
     def button_draft(self):
         """Check settled lines and put settlements associated to the invoices in
+        invoice when state is changed from cancel to draft.
+        """
+        self.mapped("line_ids.settlement_id").write({"state": "invoiced"})
+        return super().button_draft()
+
+    def button_cancel(self):
+        """Check settled lines and put settlements associated to the invoices in
         exception.
         """
         if any(self.mapped("invoice_line_ids.any_settled")):
             raise exceptions.ValidationError(
                 _("You can't cancel an invoice with settled lines"),
             )
-        self.mapped("line_ids.settlement_id").write({"state": "invoiced"})
-        return super().button_draft()
+        self.mapped("line_ids.settlement_id").write({"state": "except_invoice"})
+        return super().button_cancel()
+    
+    def unlink(self):
+        """Check settled lines and put settlements associated to the invoices in
+        settled state.
+        """
+        if any(self.mapped("invoice_line_ids.any_settled")):
+            raise exceptions.ValidationError(
+                _("You can't delete an invoice with settled lines"),
+            )
+        self.mapped("line_ids.settlement_id").write({"state": "settled"})
+        return super().unlink()
 
     def recompute_lines_agents(self):
         self.mapped("invoice_line_ids").recompute_agents()
