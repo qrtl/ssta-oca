@@ -293,7 +293,7 @@ class TestAccountCommission(TestCommissionBase):
         self.assertEqual(commission_refund.move_type, "in_refund")
         # Undo invoices + make invoice again to get a unified invoice
         commission_invoices = commission_invoice + commission_refund
-        commission_invoices.button_draft()
+        commission_invoices.button_cancel()
         self.assertEqual(settlement.state, "except_invoice")
         self.assertEqual(second_settlement.state, "except_invoice")
         commission_invoices.unlink()

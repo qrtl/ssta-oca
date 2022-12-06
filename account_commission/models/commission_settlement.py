@@ -52,6 +52,9 @@ class CommissionSettlement(models.Model):
             raise UserError(_("Cannot cancel an invoiced settlement."))
         return super().action_cancel()
 
+    def action_draft(self):
+        self.write({"state": "settled"})
+
     def unlink(self):
         """Allow to delete only cancelled settlements."""
         if any(x.state == "invoiced" for x in self):

@@ -7,6 +7,9 @@
         <field name="arch" type="xml">
             <tree position="attributes">
                 <attribute name="decoration-muted">state == 'invoiced'</attribute>
+                <attribute
+                    name="decoration-danger"
+                >state == 'except_invoice'</attribute>
             </tree>
         </field>
     </record>
@@ -23,6 +26,13 @@
                     class="oe_highlight"
                     type="object"
                     name="action_invoice"
+                    groups="account.group_account_invoice"
+                />
+                <button
+                    string="Reset to draft"
+                    attrs="{'invisible': [('state', '!=', 'except_invoice')]}"
+                    type="object"
+                    name="action_draft"
                     groups="account.group_account_invoice"
                 />
             </button>
