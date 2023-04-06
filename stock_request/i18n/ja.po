@@ -1118,25 +1118,25 @@ msgstr "倉庫の会社は、すでに別の会社に属する在庫依頼オー
 #: code:addons/stock_request/models/stock_request_abstract.py:0
 #, python-format
 msgid "You have entered a location that is assigned to another company."
-msgstr "他社に割り当てられているロケーションを入力しました。"
+msgstr "別の会社に割り当てられているロケーションを入力しました。"
 
 #. module: stock_request
 #: code:addons/stock_request/models/stock_request_abstract.py:0
 #, python-format
 msgid "You have entered a product that is assigned to another company."
-msgstr "他社に割り当てられているプロダクトを入力しました。"
+msgstr "別の会社に割り当てられているプロダクトを入力しました。"
 
 #. module: stock_request
 #: code:addons/stock_request/models/stock_request_abstract.py:0
 #, python-format
 msgid "You have entered a route that is assigned to another company."
-msgstr "他社に割り当てられているルートを入力しました。"
+msgstr "別の会社に割り当てられているルートを入力しました。"
 
 #. module: stock_request
 #: code:addons/stock_request/models/stock_request_abstract.py:0
 #, python-format
 msgid "You have entered a warehouse that is assigned to another company."
-msgstr "他社に割り当てられている倉庫を入力しました。"
+msgstr "別の会社に割り当てられている倉庫を入力しました。"
 
 #. module: stock_request
 #: code:addons/stock_request/models/stock_request_abstract.py:0
