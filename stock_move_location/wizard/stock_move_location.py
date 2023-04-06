@@ -47,11 +47,10 @@ class StockMoveLocationWizard(models.TransientModel):
         required=True,
         domain=lambda self: self._get_locations_domain(),
     )
-    stock_move_location_line_ids = fields.Many2many(
+    stock_move_location_line_ids = fields.One2many(
+        "wiz.stock.move.location.line",
+        "move_location_wizard_id",
         string="Move Location lines",
-        comodel_name="wiz.stock.move.location.line",
-        column1="move_location_wiz_id",
-        column2="move_location_line_wiz_id",
     )
     picking_type_id = fields.Many2one(
         comodel_name="stock.picking.type", default=_get_default_picking_type_id
@@ -236,8 +235,6 @@ class StockMoveLocationWizard(models.TransientModel):
             moves_to_unreserve = move_lines.mapped("move_id")
             # Unreserve in old location
             moves_to_unreserve._do_unreserve()
-            # Change location in move with the new one
-            moves_to_unreserve.write({"location_id": line.destination_location_id.id})
             moves_to_reassign |= moves_to_unreserve
         return moves_to_reassign
 
@@ -294,8 +291,8 @@ class StockMoveLocationWizard(models.TransientModel):
             product_data.append(
                 {
                     "product_id": product.id,
-                    "move_quantity": group.get("quantity"),
-                    "max_quantity": group.get("quantity"),
+                    "move_quantity": group.get("quantity") or 0,
+                    "max_quantity": group.get("quantity") or 0,
                     "reserved_quantity": group.get("reserved_quantity"),
                     "origin_location_id": self.origin_location_id.id,
                     "destination_location_id": location_dest_id,
