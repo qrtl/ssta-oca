@@ -1,0 +1,8 @@
+diff a/.pre-commit-config.yaml b/.pre-commit-config.yaml	(rejected hunks)
+@@ -40,4 +39,4 @@ repos:
+       - id: oca-update-pre-commit-excluded-addons
+-      - id: oca-fix-manifest-website
+-        args: [""]
++      # - id: oca-fix-manifest-website
++      #   args: [""]
+   - repo: https://github.com/myint/autoflake
