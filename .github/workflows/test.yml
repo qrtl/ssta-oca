@@ -10,6 +10,7 @@ on:
       - "15.0-ocabot-*"
 
 jobs:
+<<<<<<< HEAD
   unreleased-deps:
     runs-on: ubuntu-latest
     name: Detect unreleased dependencies
@@ -27,6 +28,8 @@ jobs:
                   fi
               fi
           done
+=======
+>>>>>>> 579d0d31f10f82ee30050e9d6c28a865f779209c
   test:
     runs-on: ubuntu-22.04
     container: ${{ matrix.container }}
@@ -37,7 +40,10 @@ jobs:
         include:
           - container: ghcr.io/oca/oca-ci/py3.8-ocb15.0:latest
             name: test with OCB
+<<<<<<< HEAD
             makepot: "false"
+=======
+>>>>>>> 579d0d31f10f82ee30050e9d6c28a865f779209c
     services:
       postgres:
         image: postgres:9.6
@@ -48,7 +54,11 @@ jobs:
         ports:
           - 5432:5432
     steps:
+<<<<<<< HEAD
       - uses: actions/checkout@v3
+=======
+      - uses: actions/checkout@v2
+>>>>>>> 579d0d31f10f82ee30050e9d6c28a865f779209c
         with:
           persist-credentials: false
       - name: Install addons and dependencies

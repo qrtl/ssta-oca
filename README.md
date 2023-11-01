@@ -7,9 +7,15 @@
 
 <!-- /!\ do not modify above this line -->
 
+<<<<<<< HEAD
 # RMM-OCA
 
 OCA modules for RMM
+=======
+# None
+
+None
+>>>>>>> 579d0d31f10f82ee30050e9d6c28a865f779209c
 
 <!-- /!\ do not modify below this line -->
 
