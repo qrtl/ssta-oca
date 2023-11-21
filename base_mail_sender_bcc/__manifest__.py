@@ -9,7 +9,7 @@
     "category": "Mail",
     "license": "AGPL-3",
     "summary": "Always send a copy of the mail to the sender",
-    "author": "Akretion, Quartile Limited",
+    "author": "Akretion, Quartile Limited, Odoo Community Association (OCA)",
     "website": "https://www.quartile.co",
     "depends": ["base"],
     "installable": True,

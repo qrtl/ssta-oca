@@ -13,9 +13,7 @@
         "data/res_country_data.xml",
     ],
     "assets": {
-        "web.assets_backend": [
-            "l10n_jp_address_layout/static/src/scss/form_view.scss"
-        ],
+        "web.assets_backend": ["l10n_jp_address_layout/static/src/scss/form_view.scss"],
     },
     "installable": True,
 }
