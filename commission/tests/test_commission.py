@@ -50,6 +50,21 @@ class TestCommissionBase(TransactionCase):
             }
         )
         cls.company = cls.env.ref("base.main_company")
+        cls.foreign_currency = cls.env["res.currency"].create(
+            {
+                "name": "Coin X",
+                "rounding": 0.01,
+                "symbol": "CX",
+            }
+        )
+        cls.rate = cls.env["res.currency.rate"].create(
+            {
+                "company_id": cls.company.id,
+                "currency_id": cls.foreign_currency.id,
+                "name": "2023-01-01",
+                "rate": 25,
+            }
+        )
         cls.res_partner_model = cls.env["res.partner"]
         cls.partner = cls.env.ref("base.res_partner_2")
         cls.partner.write({"agent": False})
@@ -89,6 +104,14 @@ class TestCommissionBase(TransactionCase):
                 "name": "Test Agent - Annual",
                 "agent": True,
                 "settlement": "annual",
+                "lang": "en_US",
+            }
+        )
+        cls.agent_pending = cls.res_partner_model.create(
+            {
+                "name": "Test Agent - Pending",
+                "agent": True,
+                "settlement": "pending",
                 "lang": "en_US",
             }
         )
@@ -167,3 +190,10 @@ class TestCommission(TestCommissionBase):
         # Write
         partner.agent_ids = [(4, self.agent_annual.id)]
         self.assertEqual(set(child.agent_ids.ids), set(partner.agent_ids.ids))
+
+    def test_auto_subscribe_agent(self):
+        settlement = self._create_settlement(
+            self.agent_monthly, self.commission_net_paid
+        )
+        # Agent must be in the followers
+        self.assertIn(self.agent_monthly, settlement.message_partner_ids)
