@@ -442,10 +442,9 @@ self['{}'] = self.env['{}'].search(self.safe_domain(self.domain))
             "view_mode": "form",
             "context": """
                 {'template_domain': [('res_model', '=', '%s'),
-                                     ('fname', '=', '%s'),
                                      ('gname', '=', False)]}
             """
-            % (self.res_model, self.fname),
+            % (self.res_model),
         }
         action = self.env["ir.actions.act_window"].create(vals)
         self.export_action_id = action
