@@ -87,13 +87,14 @@ class CommissionSettlement(models.Model):
         partner = self._get_invoice_partner()
         move_form.partner_id = partner
         move_form.journal_id = journal
+        move_form.currency_id = self.currency_id
         for settlement in self:
             with move_form.invoice_line_ids.new() as line_form:
                 line_form.product_id = product
                 line_form.quantity = -1 if settlement.total < 0 else 1
                 line_form.price_unit = abs(settlement.total)
                 # Put period string
-                partner = self.agent_id
+                partner = settlement.agent_id
                 lang = self.env["res.lang"].search(
                     [
                         (
@@ -118,7 +119,7 @@ class CommissionSettlement(models.Model):
         return vals
 
     def _get_invoice_grouping_keys(self):
-        return ["company_id", "agent_id"]
+        return ["company_id", "currency_id", "agent_id"]
 
     def make_invoices(self, journal, product, date=False, grouped=False):
         invoice_vals_list = []
@@ -157,7 +158,9 @@ class CommissionSettlement(models.Model):
 class SettlementLine(models.Model):
     _inherit = "commission.settlement.line"
 
-    invoice_agent_line_id = fields.Many2one(comodel_name="account.invoice.line.agent")
+    invoice_agent_line_id = fields.Many2one(
+        comodel_name="account.invoice.line.agent", index=True
+    )
     invoice_line_id = fields.Many2one(
         comodel_name="account.move.line",
         store=True,

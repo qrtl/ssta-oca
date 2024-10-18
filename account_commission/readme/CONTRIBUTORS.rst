@@ -7,11 +7,13 @@
 * Oihane Crucelaegui <oihanecruce@gmail.com>
 * Nicola Malcontenti <nicola.malcontenti@agilebg.com>
 * Aitor Bouzas <aitor.bouzas@adaptivecity.com>
+* Alexei Rivera <arivera@archeti.com>
 
 * `Tecnativa <https://www.tecnativa.com>`__:
 
   * Pedro M. Baeza
   * Manuel Calero
+  * Sergio Teruel
 
 * `Quartile <https://www.quartile.co>`__:
 

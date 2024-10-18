@@ -10,7 +10,12 @@
                     name="commission_id"
                     domain="['|', ('settlement_type', '=', 'sale_invoice'), ('settlement_type', '=', False)]"
                 />
-                <field name="amount" />
+                <field
+                    name="amount"
+                    widget="monetary"
+                    options="{'currency_field': 'currency_id'}"
+                />
+                <field name="currency_id" invisible="1" />
             </tree>
         </field>
     </record>
@@ -26,7 +31,7 @@
                     attrs="{'invisible': [('agent_ids', '=', [])], 'readonly': [('any_settled', '=', True)]}"
                 >
                     <field name="any_settled" invisible="1" />
-                    <field name="commission_free" force_save="1" />
+                    <field name="commission_free" force_save="1" readonly="1" />
                     <field
                         name="agent_ids"
                         attrs="{'readonly': [('commission_free', '=', True)]}"
@@ -88,9 +93,10 @@
                     name="recompute_lines_agents"
                     type="object"
                     string="Regenerate agents"
-                    states="draft"
                     attrs="{'invisible': [
-                        ('move_type', 'not in', ['out_invoice', 'out_refund'])
+                        '|',
+                        ('move_type', 'not in', ['out_invoice', 'out_refund']),
+                        ('state', '!=', 'draft')
                     ]}"
                 />
             </xpath>

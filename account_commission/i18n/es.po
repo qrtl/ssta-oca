@@ -6,92 +6,93 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-12-20 15:45+0000\n"
-"Last-Translator: Ryoko Tsuda <ryoko@quartile.co>\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2024-03-20 21:36+0000\n"
+"Last-Translator: Ivorra78 <informatica@totmaterial.es>\n"
 "Language-Team: none\n"
-"Language: ja\n"
+"Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.14.1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.17\n"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__quantity
 msgid "# of Qty"
-msgstr "# 数量"
+msgstr "# de Cantd"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.commission_make_invoice_form
 msgid "(keep empty for invoicing all the pending settlements)"
-msgstr "(全ての未清算分の請求書を作成するためには空欄にしてください）"
+msgstr "(dejar vacío para facturar todas las liquidaciones pendientes)"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.report_settlement_document
 msgid "<strong>Settlement invoice:</strong>"
-msgstr ""
+msgstr "<strong>Factura de liquidación:</strong>"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__agent_id
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__agent_id
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Agent"
-msgstr "エージェント"
+msgstr "Agente"
 
 #. module: account_commission
 #: model:ir.model,name:account_commission.model_account_invoice_line_agent
 msgid "Agent detail of commission line in invoice lines"
-msgstr "請求書明細についてのコミッション明細のエージェント詳細"
+msgstr "Detalle de agente de líneas de comisión en las líneas de factura"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_bank_statement_line__partner_agent_ids
 #: model:ir.model.fields,field_description:account_commission.field_account_move__partner_agent_ids
 #: model:ir.model.fields,field_description:account_commission.field_account_payment__partner_agent_ids
 msgid "Agents"
-msgstr "エージェント"
+msgstr "Agentes"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_move_line__agent_ids
 msgid "Agents & commissions"
-msgstr "エージェント＆コミッション"
+msgstr "Agentes & comisiones"
 
 #. module: account_commission
 #: model:ir.model.fields,help:account_commission.field_account_move_line__agent_ids
 msgid "Agents/Commissions related to the invoice line."
-msgstr "請求書明細に関連するエージェント/コミッション。"
+msgstr "Agentes/Comisiones relacionadas a la línea de factura."
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__amount
 #: model_terms:ir.ui.view,arch_db:account_commission.report_settlement_document
 msgid "Amount"
-msgstr "金額"
+msgstr "Importe"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_move_line__any_settled
 msgid "Any Settled"
-msgstr "精算有"
+msgstr "Cualquiera Liquidada"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__balance
 msgid "Balance"
-msgstr "残高"
+msgstr "Balance"
 
 #. module: account_commission
 #: code:addons/account_commission/models/commission_settlement.py:0
 #, python-format
 msgid "Cannot cancel an invoiced settlement."
-msgstr "請求済み精算はキャンセルできません。"
+msgstr "No se puede anular una liquidación facturada."
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__categ_id
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Category of Product"
-msgstr "プロダクトカテゴリ"
+msgstr "Categoría de Producto"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_move_line__commission_free
 msgid "Comm. free"
-msgstr "コミッション対象外"
+msgstr "Libre de comisión"
 
 #. module: account_commission
 #: model:ir.model,name:account_commission.model_commission
@@ -99,18 +100,18 @@ msgstr "コミッション対象外"
 #: model:ir.model.fields,field_description:account_commission.field_account_move_line__commission_status
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__commission_id
 msgid "Commission"
-msgstr "コミッション"
+msgstr "Comisión"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__amount
 msgid "Commission Amount"
-msgstr "コミッション金額"
+msgstr "Importe de comisión"
 
 #. module: account_commission
 #: model:ir.actions.act_window,name:account_commission.action_invoice_commission_analysis_report
 #: model:ir.ui.menu,name:account_commission.menu_invoice_commissions_analysis
 msgid "Commission Analysis"
-msgstr "コミッション分析"
+msgstr "Análisis de comisión"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_bank_statement_line__commission_total
@@ -119,7 +120,7 @@ msgstr "コミッション分析"
 #: model:ir.ui.menu,name:account_commission.menu_invoicing_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_move_line_form
 msgid "Commissions"
-msgstr "コミッション"
+msgstr "Comisiones"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__company_id
@@ -127,104 +128,104 @@ msgstr "コミッション"
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__company_id
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Company"
-msgstr "会社"
+msgstr "Compañía"
 
 #. module: account_commission
 #: model:ir.model.fields,help:account_commission.field_commission_make_invoice__company_id
 msgid "Company related to this journal"
-msgstr "この仕訳帳に紐づく会社"
+msgstr "Compañía relacionada a este diario"
 
 #. module: account_commission
 #: model:ir.actions.act_window,name:account_commission.action_commission_make_invoices
 #: model:ir.ui.menu,name:account_commission.menu_invoicing_settlements_make_invoice
 msgid "Create Commission Invoices"
-msgstr "コミッション請求書作成"
+msgstr "Crear facturas de comisiones"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.commission_make_invoice_form
 msgid "Create invoices"
-msgstr "請求書作成"
+msgstr "Crear Facturas"
 
 #. module: account_commission
 #: code:addons/account_commission/wizards/wizard_invoice.py:0
 #, python-format
 msgid "Created Invoices"
-msgstr "作成済み請求書"
+msgstr "Facturas creadas"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__create_uid
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__create_uid
 msgid "Created by"
-msgstr "作成者"
+msgstr "Creado por"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__create_date
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__create_date
 msgid "Created on"
-msgstr "作成日"
+msgstr "Creado el"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__currency_id
 msgid "Currency"
-msgstr "通貨"
+msgstr "Moneda"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.report_settlement_document
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Customer"
-msgstr "顧客"
+msgstr "Cliente"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__date
 msgid "Date"
-msgstr "日付"
+msgstr "Fecha"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.report_settlement_document
 msgid "Description"
-msgstr ""
+msgstr "Descripción"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__display_name
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__display_name
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__display_name
 msgid "Display Name"
-msgstr "表示名"
+msgstr "Nombre a mostrar"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Draft"
-msgstr "ドラフト"
+msgstr "Borrador"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Extended Filters"
-msgstr "拡張フィルタ"
+msgstr "Filtros avanzados"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__from_settlement
 msgid "From Settlement"
-msgstr "精算より"
+msgstr "De Liquidación"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_settlement__invoice_id
 msgid "Generated Invoice"
-msgstr "生成済請求書"
+msgstr "Factura generada"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_settlement__invoice_line_ids
 msgid "Generated invoice lines"
-msgstr "生成済請求書明細"
+msgstr "Líneas de factura generadas"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Group By"
-msgstr "グループ化"
+msgstr "Agrupar por"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__grouped
 msgid "Group invoices"
-msgstr "グループ請求書"
+msgstr "Agrupar facturas"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__id
@@ -237,190 +238,190 @@ msgstr "ID"
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__invoice_id
 #: model_terms:ir.ui.view,arch_db:account_commission.report_settlement_document
 msgid "Invoice"
-msgstr "請求書"
+msgstr "Factura"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_settlement_line__invoice_agent_line_id
 msgid "Invoice Agent Line"
-msgstr "請求書エージェント明細"
+msgstr "Línea de factura de Agente"
 
 #. module: account_commission
 #: model:ir.model.fields.selection,name:account_commission.selection__commission__invoice_state__open
 msgid "Invoice Based"
-msgstr "請求基準"
+msgstr "Basado en factura"
 
 #. module: account_commission
 #: model:ir.model,name:account_commission.model_invoice_commission_analysis_report
 msgid "Invoice Commission Analysis Report"
-msgstr "請求コミッション分析レポート"
+msgstr "Informe analítico de facturas de comisión"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__date_invoice
 msgid "Invoice Date"
-msgstr "請求日"
+msgstr "Fecha de factura"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__invoice_line_id
 msgid "Invoice Line"
-msgstr "請求明細"
+msgstr "Línea de factura"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Invoice Month"
-msgstr "請求月"
+msgstr "Mes de facturación"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission__invoice_state
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__invoice_state
 msgid "Invoice Status"
-msgstr "請求書ステータス"
+msgstr "Estado de la factura"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__invoice_date
 msgid "Invoice date"
-msgstr "請求日"
+msgstr "Fecha de factura"
 
 #. module: account_commission
 #: model:ir.model.fields.selection,name:account_commission.selection__commission_settlement__state__except_invoice
 msgid "Invoice exception"
-msgstr "請求書例外"
+msgstr "Excepción de factura"
 
 #. module: account_commission
 #: model:ir.model.fields.selection,name:account_commission.selection__commission_settlement__state__invoiced
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Invoiced"
-msgstr "請求済"
+msgstr "Facturado"
 
 #. module: account_commission
 #: model:ir.actions.act_window,name:account_commission.action_invoicing_commission_settlement
 #: model:ir.ui.menu,name:account_commission.menu_invoicing_settlements
 msgid "Invoices Settlements"
-msgstr "請求書の精算"
+msgstr "Liquidación de Facturas"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__journal_id
 msgid "Journal"
-msgstr "仕訳帳"
+msgstr "Diario"
 
 #. module: account_commission
 #: model:ir.model,name:account_commission.model_account_move
 msgid "Journal Entry"
-msgstr "仕訳"
+msgstr "Entrada Diaria"
 
 #. module: account_commission
 #: model:ir.model,name:account_commission.model_account_move_line
 msgid "Journal Item"
-msgstr "仕訳明細"
+msgstr "Artículo Diario"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent____last_update
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice____last_update
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report____last_update
 msgid "Last Modified on"
-msgstr "最終更新日"
+msgstr "Última modificación en"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__write_uid
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__write_uid
 msgid "Last Updated by"
-msgstr "最終更新者"
+msgstr "Última actualización por"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__write_date
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__write_date
 msgid "Last Updated on"
-msgstr "最終更新日"
+msgstr "Última actualización el"
 
 #. module: account_commission
 #: model:ir.model,name:account_commission.model_commission_settlement_line
 msgid "Line of a commission settlement"
-msgstr "コミッション精算明細"
+msgstr "Línea de liquidación de una comisión"
 
 #. module: account_commission
 #: code:addons/account_commission/models/commission_settlement.py:0
 #: model_terms:ir.ui.view,arch_db:account_commission.view_settlement_form
 #, python-format
 msgid "Make invoice"
-msgstr "請求書作成"
+msgstr "Hacer factura"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.commission_make_invoice_form
 msgid "Make invoices"
-msgstr "請求書作成"
+msgstr "Hacer facturas"
 
 #. module: account_commission
 #: model:res.groups,name:account_commission.group_invoicing_commission
 msgid "Manage invoices commissions"
-msgstr "コミッション請求の管理"
+msgstr "Gestionar las comisiones de facturas"
 
 #. module: account_commission
 #: code:addons/account_commission/wizards/wizard_invoice.py:0
 #, python-format
 msgid "No valid settlements to invoice."
-msgstr "請求対象の有効な精算がありません。"
+msgstr "No hay liquidaciones válidas para facturar."
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Not Settled"
-msgstr "未清算"
+msgstr "No liquidado"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__object_id
 msgid "Parent"
-msgstr "親"
+msgstr "Padre"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__partner_id
 msgid "Partner"
-msgstr "取引先"
+msgstr "Socio"
 
 #. module: account_commission
 #: model:ir.model.fields.selection,name:account_commission.selection__commission__invoice_state__paid
 msgid "Payment Based"
-msgstr "支払基準"
+msgstr "Pago basado en"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__percentage
 msgid "Percentage of commission"
-msgstr "コミッション比率"
+msgstr "Porcentaje de comisión"
 
 #. module: account_commission
 #: code:addons/account_commission/models/commission_settlement.py:0
 #, python-format
 msgid "Period: from %(date_from)s to %(date_to)s"
-msgstr "期間: %(date_from)s ～ %(date_to)s"
+msgstr "Período: de %(date_from)s a %(date_to)s"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_move_line__product_id
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__product_id
 msgid "Product"
-msgstr "プロダクト"
+msgstr "Producto"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__product_id
 msgid "Product for invoicing"
-msgstr "請求用プロダクト"
+msgstr "Producto a facturar"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.report_settlement_document
 msgid "Quantity"
-msgstr ""
+msgstr "Cantidad"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_move_form
 msgid "Regenerate agents"
-msgstr "エージェント再取込"
+msgstr "Regenerar agentes"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_settlement_form
 msgid "Reset to draft"
-msgstr "ドラフトに再設定"
+msgstr "Devolver a borrador"
 
 #. module: account_commission
 #: model:ir.model.fields.selection,name:account_commission.selection__commission_make_settle__settlement_type__sale_invoice
 #: model:ir.model.fields.selection,name:account_commission.selection__commission_settlement__settlement_type__sale_invoice
 msgid "Sales Invoices"
-msgstr "販売請求書"
+msgstr "Facturas de Venta"
 
 #. module: account_commission
 #: model:ir.model.fields,help:account_commission.field_commission__invoice_state
@@ -430,43 +431,47 @@ msgid ""
 "* 'Payment Based': Commissions are settled when the invoice is paid (or "
 "refunded)."
 msgstr ""
+"Seleccione el estado de la factura para liquidar las comisiones:\n"
+"* 'Basado en factura': Las comisiones se liquidan cuando se emite la factura."
+"\n"
+"* Pago\": Las comisiones se liquidan cuando se paga (o reembolsa) la factura."
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__settled
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__settled
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Settled"
-msgstr "精算済"
+msgstr "Establecido"
 
 #. module: account_commission
 #: model:ir.model,name:account_commission.model_commission_settlement
 #: model:ir.model.fields,field_description:account_commission.field_account_move_line__settlement_id
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_invoice__settlement_ids
 msgid "Settlement"
-msgstr "精算"
+msgstr "Liquidación"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_bank_statement_line__settlement_count
 #: model:ir.model.fields,field_description:account_commission.field_account_move__settlement_count
 #: model:ir.model.fields,field_description:account_commission.field_account_payment__settlement_count
 msgid "Settlement Count"
-msgstr "精算数"
+msgstr "Recuento de liquidación"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_invoice_line_agent__settlement_line_ids
 msgid "Settlement Line"
-msgstr "精算明細"
+msgstr "Línea de liquidación"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_make_settle__settlement_type
 #: model:ir.model.fields,field_description:account_commission.field_commission_settlement__settlement_type
 msgid "Settlement Type"
-msgstr "精算タイプ"
+msgstr "Tipo de liquidación"
 
 #. module: account_commission
 #: model:ir.model.fields,help:account_commission.field_account_move_line__settlement_id
 msgid "Settlement that generates this invoice line"
-msgstr "この請求書明細を生成した精算"
+msgstr "Liquidación que genera esta línea de factura"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_account_bank_statement_line__settlement_ids
@@ -476,44 +481,46 @@ msgstr "この請求書明細を生成した精算"
 #: model_terms:ir.ui.view,arch_db:account_commission.view_in_invoice_bill_tree_inherit
 #: model_terms:ir.ui.view,arch_db:account_commission.view_move_form
 msgid "Settlements"
-msgstr "精算"
+msgstr "Liquidaciones"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_settlement_line__invoice_line_id
 msgid "Source invoice line"
-msgstr "請求書明細元"
+msgstr "Origen de línea de factura"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_commission_settlement__state
 msgid "State"
-msgstr "ステータス"
+msgstr "Estado"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "Status"
-msgstr "ステータス"
+msgstr "Estado"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__price_subtotal
 msgid "Subtotal"
-msgstr "小計"
+msgstr "Sub total"
 
 #. module: account_commission
 #: model:ir.model.fields,help:account_commission.field_account_invoice_line_agent__invoice_id
 msgid "The move of this entry line."
-msgstr "この明細の仕訳"
+msgstr "El movimiento de esta línea de entrada."
 
 #. module: account_commission
 #: model:ir.model.fields,help:account_commission.field_commission_settlement__settlement_type
 msgid ""
 "The source of the settlement, e.g. 'Sales invoice', 'Sales order', 'Purchase "
 "order'..."
-msgstr "精算元　例：「顧客請求書」、「販売オーダ」、「購買オーダ」..."
+msgstr ""
+"El origen de esta liquidación, por ej. 'Factura de venta','Pedido de "
+"venta','Pedido de compra'..."
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "This Year"
-msgstr "今年"
+msgstr "Este Año"
 
 #. module: account_commission
 #: model_terms:ir.actions.act_window,help:account_commission.action_invoice_commission_analysis_report
@@ -523,64 +530,61 @@ msgid ""
 "product category, aget, etc. Use this report to perform analysis on invoice "
 "lines agents not beeing settled yet."
 msgstr ""
-"このレポートは、請求書明細に追加されたコミッションを分析します。日付、プロダ"
-"クト、プロダクトカテゴリ、エージェントなど毎に、金額や精算される行を確認する"
-"ことができます。まだ精算されていない請求書明細のエージェントを分析するために"
-"使用します。"
+"Este informe realiza un análisis de sus comisiones añadidas en las líneas de "
+"factura. Puede comprobar el importe y las líneas que se liquidarán por "
+"fecha, producto, categoría de producto, edad, etc. Utilice este informe para "
+"analizar las líneas de factura que aún no han sido liquidadas."
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__price_unit
 msgid "Unit Price"
-msgstr "単価"
+msgstr "Precio unitario"
 
 #. module: account_commission
 #: model:ir.model.fields,field_description:account_commission.field_invoice_commission_analysis_report__uom_id
 msgid "Unit of Measure"
-msgstr "単位"
+msgstr "Unidad de Medida"
 
 #. module: account_commission
 #: model:ir.model,name:account_commission.model_commission_make_invoice
 msgid "Wizard for making an invoice from a settlement"
-msgstr "精算から請求書作成するウィザード"
+msgstr "Asistente para hacer una factura a partir de una liquidación"
 
 #. module: account_commission
 #: model:ir.model,name:account_commission.model_commission_make_settle
 msgid "Wizard for settling commissions"
-msgstr "コミッション精算ウィザード"
+msgstr "Asistente para liquidación de comisiones"
 
 #. module: account_commission
 #: code:addons/account_commission/models/account_move.py:0
 #, python-format
 msgid "You can't cancel an invoice with settled lines"
-msgstr "精算済明細がある請求書をキャンセルすることはできません"
+msgstr "No se puede cancelar una factura con líneas liquidadas"
 
 #. module: account_commission
 #: code:addons/account_commission/models/commission_settlement.py:0
 #, python-format
 msgid "You can't delete invoiced settlements."
-msgstr "請求済の精算を削除することはできません。"
+msgstr "No se pueden borrar liquidaciones facturadas."
 
 #. module: account_commission
 #: code:addons/account_commission/models/account_move.py:0
 #, python-format
 msgid "You can't modify a settled line"
-msgstr "精算済明細を修正することはできません"
+msgstr "No se puede modificar una línea establecida"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.commission_make_invoice_form
 msgid "_Cancel"
-msgstr "_キャンセル"
+msgstr "_Cancelar"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_graph
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_pivot
 msgid "invoice Commission Analysis"
-msgstr "コミッション請求分析"
+msgstr "Análisis de comisión facturada"
 
 #. module: account_commission
 #: model_terms:ir.ui.view,arch_db:account_commission.view_invoice_commission_analysis_search
 msgid "invoices Commission Analysis"
-msgstr "コミッション請求分析"
-
-#~ msgid "Invoice line"
-#~ msgstr "請求書明細"
+msgstr "Análisis de Comisiones facturadas"

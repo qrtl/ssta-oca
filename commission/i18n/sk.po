@@ -6,32 +6,32 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2022-12-16 14:45+0000\n"
-"Last-Translator: Ryoko Tsuda <ryoko@quartile.co>\n"
+"PO-Revision-Date: 2023-03-30 22:32+0000\n"
+"Last-Translator: Jan Prokop <jprokop@jackie.sk>\n"
 "Language-Team: none\n"
-"Language: ja\n"
+"Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
-"Plural-Forms: nplurals=1; plural=0;\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.14.1\n"
 
 #. module: commission
 #: code:addons/commission/models/commission_mixin.py:0
 #, python-format
 msgid "%s commission agents"
-msgstr "%s コミッションエージェント"
+msgstr "%s zástupcov"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settled_wizard
 msgid "(keep empty for making the settlement of all agents)"
-msgstr "(すべてのエージェントの精算を行うためには空欄にしてください)"
+msgstr "(ponechajte prázdne pre zúčtovanie všetkých zástupcov)"
 
 #. module: commission
 #: code:addons/commission/models/commission_mixin.py:0
 #, python-format
 msgid "1 commission agent"
-msgstr "1 コミッションエージェント"
+msgstr "1 zástupca"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settled_wizard
@@ -43,25 +43,25 @@ msgid ""
 "                    </span>"
 msgstr ""
 "<span>\n"
-"                        自動精算はできません。この機能を有効にするには、\n"
-"                        追加のコミッションモジュールをインストールする必要が"
-"あります。\n"
+"                        nie je možné vykonať žiadne automatické zúčtovanie. "
+"Nainštalujte ďalší\n"
+"                         provízny modul pre povolenie tejto funkcie.\n"
 "                    </span>"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.report_settlement_document
 msgid "<strong>From:</strong>"
-msgstr "<strong>開始:</strong>"
+msgstr "<strong>Od:</strong>"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.report_settlement_document
 msgid "<strong>To:</strong>"
-msgstr "<strong>終了:</strong>"
+msgstr "<strong>Do:</strong>"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.report_settlement_document
 msgid "<strong>Total</strong>"
-msgstr "<strong>合計</strong>"
+msgstr "<strong>Celkom</strong>"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__message_needaction
@@ -71,7 +71,7 @@ msgstr ""
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__active
 msgid "Active"
-msgstr "有効"
+msgstr "Aktívny"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__activity_ids
@@ -102,17 +102,17 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_line_search
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_search
 msgid "Agent"
-msgstr "エージェント"
+msgstr "Zástupca"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.res_partner_view_search
 msgid "Agent Partners"
-msgstr "エージェント取引先"
+msgstr "Partneri zástupcov"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_partner_form_agent
 msgid "Agent information"
-msgstr "エージェント情報"
+msgstr "Informácie o zástupcovi"
 
 #. module: commission
 #: code:addons/commission/models/commission_mixin.py:0
@@ -124,32 +124,32 @@ msgstr "エージェント情報"
 #: model_terms:ir.ui.view,arch_db:commission.view_settled_wizard
 #, python-format
 msgid "Agents"
-msgstr "エージェント"
+msgstr "Zástupcovia"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_mixin__agent_ids
 msgid "Agents & commissions"
-msgstr "エージェント＆コミッション"
+msgstr "Zástupcovia & provízie"
 
 #. module: commission
 #: model:ir.model.fields,help:commission.field_commission_mixin__agent_ids
 msgid "Agents/Commissions related to the invoice line."
-msgstr "請求明細に関連するエージェント/コミッション。"
+msgstr "Zástupcovia / provízie týkajúce sa položky faktúry."
 
 #. module: commission
 #: model:ir.module.category,description:commission.module_category_commission
 msgid "Allows to handle commission related stuff."
-msgstr "コミッション関連の処理を許可。"
+msgstr "Umožňuje spracovávať agendu súvisiacu s províziami."
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.report_settlement_document
 msgid "Amount settled"
-msgstr "精算金額"
+msgstr "Zúčtovaná suma"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__res_partner__settlement__annual
 msgid "Annual"
-msgstr "年次"
+msgstr "Ročne"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__message_attachment_count
@@ -159,53 +159,51 @@ msgstr ""
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__amount_base_type
 msgid "Base"
-msgstr "基準"
+msgstr "Základ"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__res_partner__settlement__biweekly
 msgid "Bi-weekly"
-msgstr "隔週"
+msgstr "Dvojtýždenne"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__commission__commission_type__section
 msgid "By sections"
-msgstr "セクションごと"
+msgstr "Podľa obratu"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__can_edit
 msgid "Can Edit"
-msgstr "編集可"
+msgstr "Môže upravovať"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_make_settle__can_settle
 msgid "Can Settle"
-msgstr "精算可"
+msgstr "Môže zúčtovať"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settled_wizard
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_form
 msgid "Cancel"
-msgstr "キャンセル"
+msgstr "Zrušiť"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__commission_settlement__state__cancel
 msgid "Canceled"
-msgstr "キャンセル"
+msgstr "Zrušené"
 
 #. module: commission
 #: model:ir.model.fields,help:commission.field_res_partner__agent
 #: model:ir.model.fields,help:commission.field_res_users__agent
 msgid "Check this field if the partner is a creditor or an agent."
-msgstr ""
-"パートナーが債権者またはエージェントである場合、このフィールドをチェックして"
-"ください。"
+msgstr "Toto pole začiarknite, ak je partnerom veriteľ alebo zástupca."
 
 #. module: commission
 #: code:addons/commission/models/commission_mixin.py:0
 #: model:ir.model.fields,field_description:commission.field_commission_mixin__commission_free
 #, python-format
 msgid "Comm. free"
-msgstr "コミッション対象外"
+msgstr "Bez provízie"
 
 #. module: commission
 #: model:ir.model,name:commission.model_commission
@@ -218,56 +216,56 @@ msgstr "コミッション対象外"
 #: model_terms:ir.ui.view,arch_db:commission.commission_form
 #: model_terms:ir.ui.view,arch_db:commission.report_settlement_document
 msgid "Commission"
-msgstr "コミッション"
+msgstr "Provízia"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_line_mixin__amount
 msgid "Commission Amount"
-msgstr "コミッション金額"
+msgstr "Suma provízie"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_form
 msgid "Commission lines"
-msgstr "コミッション明細"
+msgstr "Položky provízie"
 
 #. module: commission
 #: model:ir.model,name:commission.model_commission_section
 msgid "Commission section"
-msgstr "コミッションセクション"
+msgstr "Sekcia provízií"
 
 #. module: commission
 #: model:ir.actions.act_window,name:commission.action_commission
 #: model:ir.ui.menu,name:commission.menu_commission_type
 msgid "Commission types"
-msgstr "コミッションタイプ"
+msgstr "Typy provízií"
 
 #. module: commission
 #: model:ir.module.category,name:commission.module_category_commission
 #: model:ir.ui.menu,name:commission.menu_commission
 msgid "Commissions"
-msgstr "コミッション"
+msgstr "Provízie"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__company_id
 #: model:ir.model.fields,field_description:commission.field_commission_settlement_line__company_id
 msgid "Company"
-msgstr "会社"
+msgstr "Spoločnosť"
 
 #. module: commission
 #: model:ir.ui.menu,name:commission.menu_commission_management
 msgid "Configuration"
-msgstr "設定"
+msgstr "Konfigurácia"
 
 #. module: commission
 #: model:ir.model,name:commission.model_res_partner
 msgid "Contact"
-msgstr "連絡先"
+msgstr "Kontakt"
 
 #. module: commission
 #: code:addons/commission/wizards/commission_make_settle.py:0
 #, python-format
 msgid "Created Settlements"
-msgstr "作成された精算"
+msgstr "Vytvorené zúčtovania"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__create_uid
@@ -276,7 +274,7 @@ msgstr "作成された精算"
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__create_uid
 #: model:ir.model.fields,field_description:commission.field_commission_settlement_line__create_uid
 msgid "Created by"
-msgstr "作成者"
+msgstr "Vytvoril"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__create_date
@@ -285,41 +283,41 @@ msgstr "作成者"
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__create_date
 #: model:ir.model.fields,field_description:commission.field_commission_settlement_line__create_date
 msgid "Created on"
-msgstr "作成日"
+msgstr "Vytvorené"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_res_partner__agent
 #: model:ir.model.fields,field_description:commission.field_res_users__agent
 msgid "Creditor/Agent"
-msgstr "債権者/エージェント"
+msgstr "Veriteľ/Zástupca"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_line_mixin__currency_id
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__currency_id
 #: model:ir.model.fields,field_description:commission.field_commission_settlement_line__currency_id
 msgid "Currency"
-msgstr "通貨"
+msgstr "Mena"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement_line__date
 #: model_terms:ir.ui.view,arch_db:commission.report_settlement_document
 msgid "Date"
-msgstr "日付"
+msgstr "Dátum"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_search
 msgid "Date from month"
-msgstr "日付"
+msgstr "Dátum mesiaca"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_line_search
 msgid "Date month"
-msgstr "日付"
+msgstr "Mesiac"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_commission_mixin_agent_only
 msgid "Discard"
-msgstr "破棄"
+msgstr "Zrušiť"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__display_name
@@ -328,18 +326,18 @@ msgstr "破棄"
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__display_name
 #: model:ir.model.fields,field_description:commission.field_commission_settlement_line__display_name
 msgid "Display Name"
-msgstr "表示名"
+msgstr "Zobrazený názov"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__res_partner__agent_type__agent
 msgid "External agent"
-msgstr "外部エージェント"
+msgstr "Externý zástupca"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__fix_qty
 #: model:ir.model.fields.selection,name:commission.selection__commission__commission_type__fixed
 msgid "Fixed percentage"
-msgstr "固定率"
+msgstr "Pevný percentuálny podiel"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__message_follower_ids
@@ -360,24 +358,24 @@ msgstr ""
 #: model:ir.model.fields,field_description:commission.field_product_product__commission_free
 #: model:ir.model.fields,field_description:commission.field_product_template__commission_free
 msgid "Free of commission"
-msgstr "コミッション対象外"
+msgstr "Bez provízie"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_section__amount_from
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__date_from
 msgid "From"
-msgstr "開始"
+msgstr "Od"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.commission_form
 msgid "General information"
-msgstr "一般情報"
+msgstr "Všeobecné informácie"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_line_search
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_search
 msgid "Group By"
-msgstr "グループ化"
+msgstr "Zoskupiť podľa"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__has_message
@@ -426,7 +424,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:commission.field_commission_settlement____last_update
 #: model:ir.model.fields,field_description:commission.field_commission_settlement_line____last_update
 msgid "Last Modified on"
-msgstr "最終更新日"
+msgstr "Posledná modifikácia"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__write_uid
@@ -435,7 +433,7 @@ msgstr "最終更新日"
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__write_uid
 #: model:ir.model.fields,field_description:commission.field_commission_settlement_line__write_uid
 msgid "Last Updated by"
-msgstr "最終更新者"
+msgstr "Naposledy upravoval"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__write_date
@@ -444,12 +442,12 @@ msgstr "最終更新者"
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__write_date
 #: model:ir.model.fields,field_description:commission.field_commission_settlement_line__write_date
 msgid "Last Updated on"
-msgstr "最終更新日"
+msgstr "Naposledy upravované"
 
 #. module: commission
 #: model:ir.model,name:commission.model_commission_settlement_line
 msgid "Line of a commission settlement"
-msgstr "コミッション精算明細"
+msgstr "Položka zúčtovania provízií"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__message_main_attachment_id
@@ -459,17 +457,17 @@ msgstr ""
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settled_wizard
 msgid "Make settlements"
-msgstr "精算実行"
+msgstr "Zúčtovať provízie"
 
 #. module: commission
 #: model:res.groups,name:commission.group_commission_manager
 msgid "Manager"
-msgstr "マネジャー"
+msgstr "Správca"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__commission_settlement__settlement_type__manual
 msgid "Manual"
-msgstr "手動"
+msgstr "Ručne"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__commission__amount_base_type__net_amount
@@ -489,21 +487,21 @@ msgstr ""
 #. module: commission
 #: model:ir.model,name:commission.model_commission_mixin
 msgid "Mixin model for applying to any object that wants to handle commissions"
-msgstr "コミッションを処理したいオブジェクトに適用するためのMixinモデル"
+msgstr ""
+"Mixin model pre aplikáciu na akýkoľvek objekt, ktorý chce spracovávať "
+"provízie"
 
 #. module: commission
 #: model:ir.model,name:commission.model_commission_line_mixin
 msgid ""
 "Mixin model for having commission agent lines in any object inheriting from "
 "this one"
-msgstr ""
-"このオブジェクトを継承したオブジェクトにコミッションエージェント明細を持たせ"
-"るためのMixinモデル"
+msgstr "Mixin model na riadky províznych agentov v akomkoľvek zdedenom objekte"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__res_partner__settlement__monthly
 msgid "Monthly"
-msgstr "月次"
+msgstr "Mesačne"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__my_activity_date_deadline
@@ -514,7 +512,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:commission.field_commission__name
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__name
 msgid "Name"
-msgstr "名称"
+msgstr "Názov"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__activity_date_deadline
@@ -535,7 +533,7 @@ msgstr ""
 #: code:addons/commission/models/commission_mixin.py:0
 #, python-format
 msgid "No commission agents"
-msgstr "0 コミッションエージェント"
+msgstr "Bez zástupcov"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__message_needaction_counter
@@ -565,7 +563,7 @@ msgstr ""
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_line_mixin__object_id
 msgid "Parent"
-msgstr "親"
+msgstr "Nadradené"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__res_partner__settlement__pending
@@ -575,27 +573,27 @@ msgstr ""
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_section__percent
 msgid "Percent"
-msgstr "率"
+msgstr "Percento"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_mixin__product_id
 msgid "Product"
-msgstr "プロダクト"
+msgstr "Produkt"
 
 #. module: commission
 #: model:ir.model,name:commission.model_product_template
 msgid "Product Template"
-msgstr "プロダクトテンプレート"
+msgstr "Šablóna produktu"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__res_partner__settlement__quaterly
 msgid "Quarterly"
-msgstr "四半期"
+msgstr "Štvrťročne"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.commission_form
 msgid "Rates definition"
-msgstr "率の定義"
+msgstr "Definícia sadzieb"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__activity_user_id
@@ -610,12 +608,12 @@ msgstr ""
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_commission_mixin_agent_only
 msgid "Save"
-msgstr "保存"
+msgstr "Uložiť"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__section_ids
 msgid "Sections"
-msgstr "セクション"
+msgstr "Sekcie"
 
 #. module: commission
 #: model:ir.model.fields,help:commission.field_commission__amount_base_type
@@ -630,7 +628,7 @@ msgstr ""
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settled_wizard
 msgid "Select the date up to which you want to make the settlements:"
-msgstr "精算を行う日付までを選択します："
+msgstr "Vyberte dátum, do ktorého chcete zúčtovať provízie:"
 
 #. module: commission
 #: model:ir.model.fields,help:commission.field_commission__commission_type
@@ -645,35 +643,35 @@ msgstr ""
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__res_partner__settlement__semi
 msgid "Semi-annual"
-msgstr "半期"
+msgstr "Polročné"
 
 #. module: commission
 #: model:ir.actions.act_window,name:commission.action_agents_settlement
 #: model:ir.ui.menu,name:commission.menu_commission_make_settle
 msgid "Settle Commissions"
-msgstr "コミッション精算"
+msgstr "Zúčtovanie provízií"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settled_wizard
 msgid "Settle commissions"
-msgstr "コミッション精算"
+msgstr "Zúčtovanie provízií"
 
 #. module: commission
 #: model:ir.model.fields.selection,name:commission.selection__commission_settlement__state__settled
 msgid "Settled"
-msgstr "精算"
+msgstr "Zúčtované"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement_line__settled_amount
 msgid "Settled Amount"
-msgstr "精算金額"
+msgstr "Zúčtovaná suma"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_partner_form_agent
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_line_tree
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_tree
 msgid "Settled total"
-msgstr "精算合計"
+msgstr "Zúčtované celkom"
 
 #. module: commission
 #: model:ir.model,name:commission.model_commission_settlement
@@ -683,45 +681,45 @@ msgstr "精算合計"
 #: model_terms:ir.ui.view,arch_db:commission.report_settlement_document
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_form
 msgid "Settlement"
-msgstr "精算"
+msgstr "Zúčtovanie"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__settlement_type
 #: model:ir.model.fields,field_description:commission.field_commission_make_settle__settlement_type
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__settlement_type
 msgid "Settlement Type"
-msgstr "精算タイプ"
+msgstr "Typ zúčtovania"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_line_graph
 msgid "Settlement analysis"
-msgstr "精算分析"
+msgstr "Analýza zúčtovania"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__line_ids
 msgid "Settlement lines"
-msgstr "精算明細"
+msgstr "Položky zúčtovania"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_line_search
 msgid "Settlement lines search"
-msgstr "精算明細検索"
+msgstr "Hľadanie položiek zúčtovania"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_res_partner__settlement
 #: model:ir.model.fields,field_description:commission.field_res_users__settlement
 msgid "Settlement period"
-msgstr "精算期間"
+msgstr "Zúčtovacie obdobie"
 
 #. module: commission
 #: model:ir.actions.report,name:commission.action_report_settlement
 msgid "Settlement report"
-msgstr "精算レポート"
+msgstr "Report zúčtovania"
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_search
 msgid "Settlement search"
-msgstr "精算検索"
+msgstr "Hľadanie zúčtovaní"
 
 #. module: commission
 #: model:ir.actions.act_window,name:commission.action_commission_settlement
@@ -729,12 +727,12 @@ msgstr "精算検索"
 #: model:ir.ui.menu,name:commission.menu_settlement_parent
 #: model_terms:ir.ui.view,arch_db:commission.view_partner_form_agent
 msgid "Settlements"
-msgstr "精算"
+msgstr "Zúčtovania"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__state
 msgid "State"
-msgstr "状況"
+msgstr "Stav"
 
 #. module: commission
 #: model:ir.model.fields,help:commission.field_commission_settlement__activity_state
@@ -748,28 +746,27 @@ msgstr ""
 #. module: commission
 #: model:ir.model.fields,help:commission.field_commission_settlement__can_edit
 msgid "Technical field for determining if user can edit settlements"
-msgstr "ユーザが精算を編集できるかどうかを判断するための技術的なフィールド"
+msgstr "Technické pole určujúce, či užívateľ môže meniť zúčtovania"
 
 #. module: commission
 #: model:ir.model.fields,help:commission.field_commission_make_settle__can_settle
 msgid ""
 "Technical field for improving UX when no extra *commission is installed."
 msgstr ""
-"追加の※コミッションをインストールしない場合のUXを改善するための技術的なフィー"
-"ルド。"
+"Technické pole na zlepšenie UX, ak nie je inštalovaný ďalší provízny modul."
 
 #. module: commission
 #: code:addons/commission/models/commission.py:0
 #, python-format
 msgid "The lower limit cannot be greater than upper one."
-msgstr "下限値は上限値より大きくはできません。"
+msgstr "Spodná hranica nemôže byť vyššia ako horná."
 
 #. module: commission
 #: model:ir.model.fields,help:commission.field_commission_settlement__settlement_type
 msgid ""
 "The source of the settlement, e.g. 'Sales invoice', 'Sales order', 'Purchase "
 "order'..."
-msgstr "精算元　例：「顧客請求書」、「販売オーダ」、「購買オーダ」..."
+msgstr "Zdroj zúčtovania, napr. faktúra, objednávka, nákupná objednávka..."
 
 #. module: commission
 #: model:ir.model.fields,help:commission.field_res_partner__commission_id
@@ -778,25 +775,25 @@ msgid ""
 "This is the default commission used in the sales where this agent is "
 "assigned. It can be changed on each operation if needed."
 msgstr ""
-"このエージェントがアサインされている販売で使用されるデフォルトのコミッション"
-"です。必要に応じて、各オペレーションで変更することができます。"
+"Toto je predvolená provízia použitá pri predaji, kde je tento zástupca "
+"priradený. V prípade potreby sa môže zmeniť pri každej operácii."
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_line_search
 #: model_terms:ir.ui.view,arch_db:commission.view_settlement_search
 msgid "This year"
-msgstr "今年"
+msgstr "Tento rok"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_section__amount_to
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__date_to
 msgid "To"
-msgstr "終了"
+msgstr "Do"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__total
 msgid "Total"
-msgstr "合計"
+msgstr "Celkom"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission__commission_type
@@ -804,7 +801,7 @@ msgstr "合計"
 #: model:ir.model.fields,field_description:commission.field_res_partner__agent_type
 #: model:ir.model.fields,field_description:commission.field_res_users__agent_type
 msgid "Type"
-msgstr "タイプ"
+msgstr "Typ"
 
 #. module: commission
 #: model:ir.model.fields,help:commission.field_commission_settlement__activity_exception_decoration
@@ -824,12 +821,12 @@ msgstr ""
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_make_settle__date_to
 msgid "Up to"
-msgstr "いつまで"
+msgstr "Až do"
 
 #. module: commission
 #: model:res.groups,name:commission.group_commission_user
 msgid "User"
-msgstr "ユーザ"
+msgstr "Užívateľ"
 
 #. module: commission
 #: model:ir.model.fields,field_description:commission.field_commission_settlement__website_message_ids
@@ -844,25 +841,25 @@ msgstr ""
 #. module: commission
 #: model:ir.model,name:commission.model_commission_make_settle
 msgid "Wizard for settling commissions"
-msgstr "コミッション精算ウィザード"
+msgstr "Pomocník zúčtovania provízií"
 
 #. module: commission
 #: model:ir.model.constraint,message:commission.constraint_account_invoice_line_agent_unique_agent
 #: model:ir.model.constraint,message:commission.constraint_commission_line_mixin_unique_agent
 #: model:ir.model.constraint,message:commission.constraint_sale_order_line_agent_unique_agent
 msgid "You can only add one time each agent."
-msgstr "各エージェント1回のみ追加可能です。"
+msgstr "Môžete pridať len jedného zástupcu."
 
 #. module: commission
 #: model_terms:ir.ui.view,arch_db:commission.view_settled_wizard
 msgid "or"
-msgstr "または"
+msgstr "alebo"
 
 #~ msgid "Gross Amount"
-#~ msgstr "総額"
+#~ msgstr "Hrubá suma"
 
 #~ msgid "Net Amount"
-#~ msgstr "純額"
+#~ msgstr "Čistá suma"
 
 #~ msgid "<strong>Agent:</strong>"
-#~ msgstr "<strong>エージェント:</strong>"
+#~ msgstr "<strong>Zástupca:</strong>"
