@@ -122,6 +122,9 @@ class XLSXTemplate(models.Model):
         comodel_name="ir.actions.report",
         string="Report Action",
     )
+    is_display = fields.Boolean(
+        help="Technical field to control template visibility in server actions."
+    )
 
     def _compute_result_field(self):
         for rec in self:
@@ -431,28 +434,51 @@ self['{}'] = self.env['{}'].search(self.safe_domain(self.domain))
 
     def add_export_action(self):
         self.ensure_one()
+        model = self.env["ir.model"].search([("model", "=", self.res_model)], limit=1)
+        # Check if an action already exists for this binding_model_id
+        existing_action = self.env["ir.actions.act_window"].search(
+            [
+                ("binding_model_id", "=", model.id),
+                ("res_model", "=", "export.xlsx.wizard"),
+                ("name", "=", "Export Excel"),
+            ],
+            limit=1,
+        )
+        if existing_action:
+            self.export_action_id = existing_action
+            self.is_display = True
+            return
         vals = {
             "name": "Export Excel",
             "res_model": "export.xlsx.wizard",
-            "binding_model_id": self.env["ir.model"]
-            .search([("model", "=", self.res_model)])
-            .id,
+            "binding_model_id": model.id,
             "binding_type": "action",
             "target": "new",
             "view_mode": "form",
             "context": """
                 {'template_domain': [('res_model', '=', '%s'),
-                                     ('gname', '=', False)]}
+                                    ('is_display', '=', True),
+                                    ('gname', '=', False)]}
             """
             % (self.res_model),
         }
         action = self.env["ir.actions.act_window"].create(vals)
         self.export_action_id = action
+        self.is_display = True
 
     def remove_export_action(self):
         self.ensure_one()
         if self.export_action_id:
-            self.export_action_id.unlink()
+            self.is_display = False
+            other_template = self.search(
+                [
+                    ("export_action_id", "=", self.export_action_id.id),
+                    ("id", "!=", self.id),
+                ]
+            )
+            if not other_template:
+                self.export_action_id.unlink()
+            self.export_action_id = False
 
     def add_import_action(self):
         self.ensure_one()
