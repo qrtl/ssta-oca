@@ -122,9 +122,6 @@ class XLSXTemplate(models.Model):
         comodel_name="ir.actions.report",
         string="Report Action",
     )
-    is_display = fields.Boolean(
-        help="Technical field to control template visibility in server actions."
-    )
 
     def _compute_result_field(self):
         for rec in self:
@@ -432,22 +429,18 @@ self['{}'] = self.env['{}'].search(self.safe_domain(self.domain))
                 inst_dict[itype] = rec.post_import_hook
             rec.instruction = inst_dict
 
-    def add_export_action(self):
-        self.ensure_one()
-        model = self.env["ir.model"].search([("model", "=", self.res_model)], limit=1)
-        # Check if an action already exists for this binding_model_id
-        existing_action = self.env["ir.actions.act_window"].search(
-            [
-                ("binding_model_id", "=", model.id),
-                ("res_model", "=", "export.xlsx.wizard"),
-                ("name", "=", "Export Excel"),
-            ],
-            limit=1,
-        )
-        if existing_action:
-            self.export_action_id = existing_action
-            self.is_display = True
-            return
+    def _get_export_action_domain(self, model):
+        return [
+            ("binding_model_id", "=", model.id),
+            ("res_model", "=", "export.xlsx.wizard"),
+            ("name", "=", "Export Excel"),
+        ]
+
+    def _get_export_action(self, model):
+        export_action_domain = self._get_export_action_domain(model)
+        return self.env["ir.actions.act_window"].search(export_action_domain, limit=1)
+
+    def _create_export_action(self, model):
         vals = {
             "name": "Export Excel",
             "res_model": "export.xlsx.wizard",
@@ -457,28 +450,32 @@ self['{}'] = self.env['{}'].search(self.safe_domain(self.domain))
             "view_mode": "form",
             "context": """
                 {'template_domain': [('res_model', '=', '%s'),
-                                    ('is_display', '=', True),
+                                    ('export_action_id', '!=', False),
                                     ('gname', '=', False)]}
             """
             % (self.res_model),
         }
-        action = self.env["ir.actions.act_window"].create(vals)
-        self.export_action_id = action
-        self.is_display = True
+        return self.env["ir.actions.act_window"].create(vals)
+
+    def add_export_action(self):
+        self.ensure_one()
+        model = self.env["ir.model"].search([("model", "=", self.res_model)], limit=1)
+        export_action = self._get_export_action(model)
+        if not export_action:
+            export_action = self._create_export_action(model)
+        self.export_action_id = export_action
 
     def remove_export_action(self):
         self.ensure_one()
-        if self.export_action_id:
-            self.is_display = False
-            other_template = self.search(
-                [
-                    ("export_action_id", "=", self.export_action_id.id),
-                    ("id", "!=", self.id),
-                ]
-            )
-            if not other_template:
-                self.export_action_id.unlink()
-            self.export_action_id = False
+        export_action = self.export_action_id
+        self.export_action_id = False
+        if not self.search(
+            [
+                ("res_model", "=", self.res_model),
+                ("export_action_id", "=", export_action.id),
+            ]
+        ):
+            export_action.unlink()
 
     def add_import_action(self):
         self.ensure_one()
